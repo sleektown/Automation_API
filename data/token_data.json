@@ -1,0 +1,13 @@
+{
+    "Token_api":{
+        "valid_creds": {
+            "grant_type": "password",
+            "username": "anubhav.gupta@kimbal.io",
+            "password": "Pass@123##$$",
+            "client_id": "Do_Kutte",
+            "client_secret": "Abc@123",
+            "refresh_token": ""
+        }
+        
+    }
+}
