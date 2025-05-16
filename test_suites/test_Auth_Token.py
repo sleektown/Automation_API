@@ -3,7 +3,6 @@ from api_requests.token_api import Auth_Token
 from utils.helper import read_json_file
 from config import baseurl
 
-
 test_data = read_json_file(fr'data\token_data.json')
 
 class TestAuthToken:
@@ -13,5 +12,6 @@ class TestAuthToken:
           response = Auth_Token.token_api(baseurl, params)
           access_token = response.get("access_token")
           print(f"\nAccess Token: {access_token}")
+          
           
           
