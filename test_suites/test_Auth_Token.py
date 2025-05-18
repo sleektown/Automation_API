@@ -6,7 +6,6 @@ from config import baseurl
 test_data = read_json_file(fr'data\token_data.json')
 
 class TestAuthToken:
-
      def test_command_type_1(self):
           params = test_data["Token_api"]["valid_creds"]
           response = Auth_Token.token_api(baseurl, params)
