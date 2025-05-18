@@ -10,7 +10,7 @@ class TestAuthToken:
           params = test_data["Token_api"]["valid_creds"]
           response = Auth_Token.token_api(baseurl, params)
           access_token = response.get("access_token")
-          print(f"\nAccess Token: {access_token}")
+          printf"\nAccess Token: {access_token}")
           
           
           
