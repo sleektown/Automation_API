@@ -7,6 +7,15 @@
             "client_id": "Do_Kutte",
             "client_secret": "Abc@123",
             "refresh_token": ""
+        },
+
+        "invalid_creds": {
+            "grant_type": "password",
+            "username": "anubhav.gupta@kimbal.com",
+            "password": "Pass@123##$$%%",
+            "client_id": "Do_Kutte",
+            "client_secret": "Abc@123",
+            "refresh_token": ""
         }
         
     }

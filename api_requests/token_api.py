@@ -8,13 +8,19 @@ class Auth_Token:
 
     def token_api(baseurl, params):
         
-        url = baseurl + "/token"
-        headers = {
-            "accept": "application/json",
-            "Content-Type": "application/x-www-form-urlencoded"
-        }
-        response = requests.post(url, data= params, headers= headers)
-        if response.status_code == 200:
-            return response.json()
-        else:
-            raise Exception(f"Failed to get token: {response.status_code} , {response.text}")
+        try:
+            url = baseurl + "/token"
+            headers = {
+                "accept": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
+            response = requests.post(url, data= params, headers= headers)
+            status_code = response.status_code
+            json_response = response.json()
+            print("\n",url," Response Time: ", response.elapsed.total_seconds())
+            if status_code != 200:
+                return {"status_code": status_code, "json_data": json_response}
+            return json_response
+        except Exception as e:
+            print(f"\nError occurred: {e}")
+            
