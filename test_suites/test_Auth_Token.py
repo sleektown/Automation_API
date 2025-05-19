@@ -16,7 +16,7 @@ class TestAuthToken:
      def test_auth_invalid_creds(self):
           params = test_data["Token_api"]["invalid_creds"]
           response = Auth_Token.token_api(baseurl, params)
-          assert(response["status_code"] == 200)
+          assert(response["status_code"] == 400)
           print(response["json_data"])
    
           
